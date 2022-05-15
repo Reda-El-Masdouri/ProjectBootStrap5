@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,30 +8,118 @@
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>Bootstrap-Premièere-Page</title>
+    <style>
+        .header {
+            background-color: rgb(2, 1, 61);
+            color: var(--bs-info);
+        }
+    </style>
   </head>
   <body>
-      <div class="container mt-5">
-          <h1>Hello, world!</h1>
-          <div class="row">
-              <div class="col">
-                  <div class="card">
-                      <div class="card header bg-dark text-light">
-                          <h1>Test</h1>
-                      </div>
-                      <div class="card-body bd-secondary">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod, dolorem voluptatum nihil et blanditiis non saepe amet dolor voluptatem rerum illo fugiat neque iste? Maxime repellat mollitia tenetur recusandae.
-                      </div>
-                  </div>
-              </div>
+     
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Bootstrap-TP</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Acceuil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Infos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Divers
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><hr class="dropdown-divider">Repas</li>
+                  <li><a class="dropdown-item" href="#">Petit déjeuner</a></li>
+                  <li><a class="dropdown-item" href="#">Déjeuner</a></li>
+                  <li><a class="dropdown-item" href="#">Dinner</a></li>
+                  <li><hr class="dropdown-divider">Boissons</li>
+                  <li><a class="dropdown-item" href="#">Jus</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Inactif</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Se connecter</a>
+                </li>
+                <div class="me-3"></div>
+                <li class="nav-item">
+                    <a href="#" class="btn btn-success">S'inscrire</a>
+                </li>
+                
+            </ul>
           </div>
-      </div>
+        </div>
+    </nav>
+    <section class="header text-center p-5">
+        <div class="container">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolorem vel soluta rerum enim vero sed sapiente vitae ipsa, pariatur provident magni, recusandae in, asperiores ut. Incidunt repellendus nemo eius!
+            </span>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Souscrire</button>
+        </div>
+    </section>
+    <section class="main-page py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center h-100">
+                <div class="col-lg-6">
+                    <img src="assets/image.webp" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="p-3">Contacter nous</h1>
+                    <p class="p-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe recusandae fugiat cupiditate adipisci! Officia, eos? Tempora a, neque, optio omnis ex sequi reiciendis magnam quibusdam, debitis ab ut est sunt.</p>
+                    <form class="p-3">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Adresse mail" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <button class="input-group-text btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                S'inscrire
+                            </button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog text-dark">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  data-bs-toggle="tooltip" data-bs-placement="top" title="Fermer le popup"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                          
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    
+  
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="assets/js/bootstrap.bundle.min.js">
     </script>
+    
+    
 
 
   </body>
